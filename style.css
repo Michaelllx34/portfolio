@@ -126,6 +126,7 @@ p {
 /* HOME */
 #home {
     background: url(./images/1.png) center/cover no-repeat;  /* /사용하면 같이 됨 */
+    padding: 40px;
     text-align: center;
 }
 
@@ -212,6 +213,10 @@ p {
     color: var(--color-brown);
 }
 
+.job__name {
+    font-size: var(--font-small);
+}
+
 .job__period {
     font-size: var(--font-micro);
 }
@@ -221,7 +226,7 @@ p {
     height: 50px;
 }
 
-/* SKILLS */
+/* SKILLs */
 #skills {
     background-color: var(--color-lightorange);
 }
@@ -268,19 +273,15 @@ p {
 }
 
 .tools {
-    background-color: var(--color-gray);
     padding: 20px;
+    background-color: var(--color-gray);
 }
-
-
 
 .etc {
     padding: 20px;
 }
 
-
-
-/* POJECT */
+/* POJECTs */
 .work__categories {
     margin: 40px;
 }
@@ -290,6 +291,7 @@ p {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    color: var(--color-white);
 }
 
 .category__btn.active, .category__btn:hover {
