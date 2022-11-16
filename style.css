@@ -15,7 +15,7 @@
     --color-gray: gray;
     --color-lightyellow: #FCEF77;
     /**/
-    --color-deeppink: deeppink;
+    --color-dirtyrosebrown: #b89c8f;
     /**/
 
     --font-large: 48px;
@@ -96,7 +96,7 @@ p {
 
 /*추가*/
 #navbar.navbar--bold{       /*  */
-    background-color: var(--color-deeppink);
+    background-color: var(--color-dirtyrosebrown);
     padding: 10px;
 }
 
@@ -108,6 +108,7 @@ p {
 
 .navbar__menu {
     display: flex;
+    margin: 0;
 }
 
 .navbar__menu__item {
@@ -115,16 +116,19 @@ p {
     margin: 0 4px;
     color: var(--color-white);
     cursor: pointer;
+    border: 1px solid transparent;  
+    border-radius: var(--size-border-radius); /**/
 }
 
 .navbar__menu__item.active {    /*메뉴얼 누르고 있을 때  ??*/
-    border: 1px solid white;
-    border-radius: var(--size-border-radius);
+    border: 1px solid var(--color-white);
+    /* border-radius: var(--size-border-radius); */
 }
 
 .navbar__menu__item:hover {
-    background-color: var(--color-rosebrown);
-    border-radius: var(--size-border-radius);
+    /* border-radius: var(--size-border-radius); */
+    background-color: var(--color-brown);
+    border-color: var(--color-white);
 }
 
 .navbar__toggle-btn {
@@ -141,6 +145,7 @@ p {
     background: url(./images/1.png) center/cover no-repeat;  /* /사용하면 같이 됨 */
     padding: 40px;
     text-align: center;
+    padding-top: 100px;
 }
 
 .home__avatar {
@@ -162,6 +167,11 @@ p {
     padding: 8px 12px;
     border: 2px solid var(--color-black);
     border-radius: var(--size-border-radius);
+}
+
+/**/
+.home__contact:hover {
+    background-color: var(--color-brown);
 }
 
 /* 공통 부분 */
@@ -307,12 +317,12 @@ p {
     color: var(--color-white);
 }
 
-.category__btn.active, .category__btn:hover {
+.category__btn.selected, .category__btn:hover {     /* .active -> selected */
     background-color: var(--color-brown);
     color: var(--color-white);
 }
 
-.category__btn.active .category__count,     /* ~자손의 */
+.category__btn.selected .category__count,     /* ~자손의 */     /* .active -> selected */
 .category__btn:hover .category__count {
     opacity: 1;
     top: 0;
@@ -337,6 +347,17 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+/**/
+.work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);    /*크기, 위쪽으로 살짝 올리기*/
+}
+
+/**/
+.project.invisible {               /*자리 차지하지 않기 때문에 땡기면 없어진다?*/
+    display: none;
 }
 
 .project {
@@ -495,6 +516,11 @@ p {
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    /**/
+    .navbar__menu.open {
+        display: block;
     }
 
     .about__majors {
