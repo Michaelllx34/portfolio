@@ -9,21 +9,22 @@
     <link rel="icon" type="image/png" href="./images/horse-removebg.png">
     <script src="https://kit.fontawesome.com/18110dfbdd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navbar 시작 -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fa-solid fa-horse"></i>
+            <i class="fa-solid fa-horse"></i>   <!-- 클래스 2개 -->
             <a href="#">JH Kim</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item active">HOME</li>
-            <li class="navbar__menu__item">WHO AM I</li>
-            <li class="navbar__menu__item">SKILLs</li>
-            <li class="navbar__menu__item">PROJECTs</li>
-            <li class="navbar__menu__item">RECOMMENDATION</li>
-            <li class="navbar__menu__item">CONTACT</li>
+            <li class="navbar__menu__item active" data-link="#home">HOME</li>     <!-- 아이디값을 따로 줘도 되지만 데이타 링크를 적용해보자. -->
+            <li class="navbar__menu__item" data-link="#about">WHO AM I</li>
+            <li class="navbar__menu__item" data-link="#skills">SKILLs</li>
+            <li class="navbar__menu__item" data-link="#work">PROJECTs</li>
+            <li class="navbar__menu__item" data-link="#testimonials">RECOMMENDATION</li>
+            <li class="navbar__menu__item" data-link="#contact">CONTACT</li>
         </ul>
         <!-- 버튼 시작 -->
         <button class="navbar__toggle-btn">
@@ -213,22 +214,22 @@
             <h1>PROJECTs</h1>
             <h3>내 작업실</h3>
             <div class="work__categories">
-                <button class="category__btn">
+                <button class="category__btn selected" data-filter="*"> <!--  data-filter="*" -->
                     전체 <span class="category__count">10</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="front-end"> <!--  data-filter="*" -->
                     프론트엔드 <span class="category__count">5</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="back-end"> <!--  data-filter="*" -->
                     백엔드 <span class="category__count">3</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="mobile"> <!--  data-filter="*" -->
                     모바일 <span class="category__count">2</span>
                 </button>
             </div>
             <div class="work__projects">
                 <!-- project1 -->
-                <a href="#" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-filter="front-end"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>Youtube Site</h3>
@@ -236,7 +237,7 @@
                     </div>
                 </a>
                 <!-- project2 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="front-end"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>Market Curly Site</h3>
@@ -244,7 +245,7 @@
                     </div>
                 </a>
                 <!-- project3 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="front-end"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>Korean Air Site</h3>
@@ -252,7 +253,7 @@
                     </div>
                 </a>
                 <!-- project4 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="back-end"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>AirBnB Site</h3>
@@ -260,7 +261,7 @@
                     </div>
                 </a>
                 <!-- project5 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="back-end"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>Triple Site</h3>
@@ -268,7 +269,7 @@
                     </div>
                 </a>
                 <!-- project6 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="back-end"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>JinAir Site</h3>
@@ -276,7 +277,7 @@
                     </div>
                 </a>
                 <!-- project7 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="mobile"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>여기어때 Site</h3>
@@ -284,7 +285,7 @@
                     </div>
                 </a>
                 <!-- project8 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="mobile"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>야놀자 Site</h3>
@@ -292,7 +293,7 @@
                     </div>
                 </a>
                 <!-- project9 -->
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-filter="mobile"> <!--  data-filter="*" -->
                     <img src="./images/youtube_images.jpg" alt="유튜브" class="project__img">
                     <div class="project__description">
                         <h3>CGV Site</h3>
@@ -353,7 +354,7 @@
     <!-- CONTACT 끝 -->
 
     <button class="arrow-up">
-        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-up"></i>    <!-- fa-arrow-up 방향 -->
     </button>
 
 </body>
